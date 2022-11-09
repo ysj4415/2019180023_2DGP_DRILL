@@ -3,6 +3,7 @@ from pico2d import *
 import game_framework
 import game_world
 from ball import Ball
+import random
 
 TIME_PER_ACTION = 0.5
 ACTION_PER_TIME = 1.0 / TIME_PER_ACTION
@@ -21,7 +22,7 @@ class Bird:
 
     def __init__(self,x = 100 ,y = 200):
         self.x, self.y = x, y
-        self.frame = 0
+        self.frame = random.randrange(0,13)
         self.dir = 1
         self.image = load_image('bird_animation.png')
 
